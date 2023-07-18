@@ -163,7 +163,7 @@ body{
 .item-galeria1{
     width: 150px;
     height: 150px;
-    border: 10px solid #FFFFFF;
+    border: 5px solid #FFFFFF;
     border-radius: 50%;
     box-shadow: 5px 5px 5px gray;
     transition: .5s ease-in-out;
