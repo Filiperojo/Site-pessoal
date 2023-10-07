@@ -408,8 +408,8 @@ h3{
     display: grid;
     place-items: center;
     height: 40vh; 
-    margin-left: 5vh;
-    margin-right: 5vh;
+    margin-left: 5%;
+    margin-right: 5%;
   }
 
 .frame {
