@@ -421,6 +421,7 @@ h3{
     height: 25vh;
     display: grid;
     grid-template-columns: 1fr 3fr; 
+    justify-content: center;
     gap: 2vh;
     overflow-x: hidden;
     
@@ -432,7 +433,7 @@ h3{
 
 .frame-item p{
     color: white;
-    max-width: 40vh;
+    max-width: 90%;
     border:1px; 
     white-space:wrap;
 }
