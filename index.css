@@ -460,12 +460,38 @@ h3{
 
 
 /* ---------------------------------------------------------CONTATO -------------------------------------------------*/
+footer{
+    background: rgba(40, 90, 115, 0.6);
+    text-shadow: 0 1px 9px #2f2f2f;
+    height: 50vh;
+    width: 100%;
+    border-radius: 5% 5% 0 0 ;
+}
+
+.footer-grid{
+    display: grid;
+    grid-template-columns: 1fr 3fr; 
+    justify-content: center;
+    margin-left: 5vh;
+
+}
+
+#contact{
+    color: white;
+    text-shadow: 0 1px 9px #afe0f5;
+    font-family: century gothic;
+    font-size: 3vh;
+    margin-bottom:5vh ;
+    font-weight: lighter;
+    text-align: center;
+    margin-top: 2vh;
+}
 .contact-grid{
     display: flex;
     margin: 15px;
     justify-content: space-evenly;
     gap: 5vh;
-    margin-top:10vh;
+    margin-top: 2vh;
     text-align: center;
     flex-wrap: wrap;
     margin-left: 10%;
@@ -474,8 +500,10 @@ h3{
 
 .contact-item{
     border: solid 2px white;
-    width: 350px;
-    height: 150px;
+    width: 40%;
+    height: 20%;
+    min-width: 10vh;
+    min-height: 5vh;
     border-radius: 25px;
     transition: .5s ease-in-out;
     text-align: center;
@@ -487,7 +515,9 @@ h3{
 
 #gmail, #whatsapp, #linkedin{
     margin-top: 10%;
+    margin-bottom: 10%;
     width: 20%;
+    min-width: 4vh;
     filter: invert(100%);
     transition: .5s ease-in-out;
 }
