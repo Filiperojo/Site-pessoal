@@ -459,7 +459,7 @@ h3{
 /* ---------------------------------------------------------PROJETOS E EXPERIÊNCIAS -------------------------------------------------*/
 /* ---------------------------------------------------------RODAPÉ -------------------------------------------------*/
 footer{
-    background: rgba(40, 90, 115, 0.6);
+    background: rgba(24, 54, 69, 0.6);
     text-shadow: 0 1px 9px #2f2f2f;
     height: 50vh;
     width: 100%;
@@ -468,9 +468,11 @@ footer{
 
 .footer-grid{
     display: grid;
-    grid-template-columns: 1fr 3fr; 
+    grid-template-columns: 3fr 3fr; 
     justify-content: center;
-    margin-left: 5vh;
+    margin-left: 2vh;
+    margin-right: 2vh;
+
 
 }
 
@@ -500,7 +502,7 @@ footer{
     border: solid 2px white;
     width: 40%;
     height: 20%;
-    min-width: 10vh;
+    max-width: 25vh;
     min-height: 5vh;
     border-radius: 25px;
     transition: .5s ease-in-out;
@@ -514,13 +516,21 @@ footer{
 #gmail, #whatsapp, #linkedin{
     margin-top: 10%;
     margin-bottom: 10%;
-    width: 20%;
+    width: 5%;
     min-width: 4vh;
     filter: invert(100%);
     transition: .5s ease-in-out;
 }
 
-.footer-list li a:visited{
+.footer-list{
+    text-align: center;
+    margin-left: -3.5vh;
+}
+
+.footer-list li a{
+    color: white;
+    font-size: 115%;
+    font-family: century gothic;
     text-decoration: none;
 }
 
