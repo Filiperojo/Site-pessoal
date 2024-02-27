@@ -277,7 +277,7 @@
             popup.style.display = "none";
         }
 
-
+        document.addEventListener('touchmove', revealBoxes);
         document.addEventListener('scroll', function () {
             var boxes = document.querySelectorAll('.projectanimator');
             boxes.forEach(function (projectanimator) {
@@ -286,7 +286,7 @@
                 }
             });
         });
-
+        document.addEventListener('touchmove', revealBoxes2);
         document.addEventListener('scroll', function () {
             var boxes2 = document.querySelectorAll('.projectanimator2');
             boxes2.forEach(function (projectanimator2) {
