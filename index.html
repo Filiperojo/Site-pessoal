@@ -277,24 +277,18 @@
             popup.style.display = "none";
         }
 
-        document.addEventListener('touchmove', function(){
-            var boxes = document.querySelectorAll('.projectanimator');
-            boxes.forEach(function (projectanimator) {
-                if (isElementInViewport(projectanimator)) {
-                    projectanimator.classList.add('reveal');
-                }
-            });
-        });
         
-        document.addEventListener('scroll', function () {
+        let functionreveal = function(){
             var boxes = document.querySelectorAll('.projectanimator');
             boxes.forEach(function (projectanimator) {
                 if (isElementInViewport(projectanimator)) {
-                    projectanimator.classList.add('reveal');
+                    projectanimator2.classList.add('reveal');
                 }
             });
         });
-        document.addEventListener('touchmove', function () {
+                }
+
+        let functionreveal2 = function(){ 
             var boxes2 = document.querySelectorAll('.projectanimator2');
             boxes2.forEach(function (projectanimator2) {
                 if (isElementInViewport(projectanimator2)) {
@@ -302,14 +296,13 @@
                 }
             });
         });
-        document.addEventListener('scroll', function () {
-            var boxes2 = document.querySelectorAll('.projectanimator2');
-            boxes2.forEach(function (projectanimator2) {
-                if (isElementInViewport(projectanimator2)) {
-                    projectanimator2.classList.add('reveal2');
-                }
-            });
-        });
+        }
+
+        document.addEventListener('scroll', functionreveal())
+        ocument.addEventListener('touchmove', functionreveal())
+        ocument.addEventListener('scroll', functionreveal2())
+        ocument.addEventListener('touchmove', functionreveal2())
+        
 
         // Função para verificar se um elemento está visível na tela
         function isElementInViewport(el) {
