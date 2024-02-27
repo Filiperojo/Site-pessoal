@@ -537,12 +537,13 @@ h3 {
 .projectanimator h3,
 .projectanimator p {
     max-width: 55vh;
+    width: 80%
     color: white;
 }
 
 
 .projectphoto {
-    width: 100%;
+    width: 80%;
     max-width: 55vh;
     max-height: 45vh;
     height: auto;
@@ -557,6 +558,7 @@ h3 {
     text-align: right;
     max-width: 55vh;
     color: white;
+    width: 80%
 }
 
 
