@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,7 +9,6 @@
     <link href="index.css" rel="stylesheet" />
     <title>Filipe</title>
 </head>
-
 <body>
     <!-- -- > Cabeçalho -->
     <div class="header">
@@ -42,7 +40,6 @@
     </div>
     <!-- -- > Partículas -->
     <!-- About me -->
-
     <div class="grid">
         <div class="grid-item" id="Aboutleft">
             <h2>About me</h2>
@@ -58,7 +55,6 @@
         <div class="grid-item" id="Aboutright"> <img src="imgs/filipe-esboco.png" style="width: 35vh; height: auto;">
         </div>
     </div>
-
     <h2 id="skills">Hard Skills</h2>
     <!-- Skills -->
     <div class="skills-grid">
@@ -110,7 +106,6 @@
                     Skills: Writing · Design · Adobe Photoshop Lightroom · Food Photography · Writing · Marketing ·
                     Adobe PhotoshopSkills: Writing
                     Design · Adobe Photoshop Lightroom · Food Photography · Writing · Marketing · Adobe Photoshop</p>
-
             </div>
         </div>
         <div class="frame">
@@ -129,7 +124,6 @@
         </div>
     </div>
     <!-- Projects and roles -->
-
     <div id="pop-up" class="pop-up"><button id="close-form" onclick="closePopup('pop-up')">X</button>
         <form action="mailto:liperojo2016@gmail.com" method="POST" enctype="text/plain">
             <H2>Your name</H2>
@@ -142,7 +136,6 @@
             <input id="reset-form" type="reset" value="Clear">
         </form>
     </div>
-
     <h2 id="certificates">Certificates</h2>
     <div class="carrossel">
         <div id="carouselExample" class="carousel slide">
@@ -222,7 +215,6 @@
             </button>
         </div>
     </div>
-
     <!-- Projects-->
     <h2 id="projects">Projects</h2>
     <div class="projectanimator">
@@ -246,7 +238,6 @@
             Aldus PageMaker including versions of Lorem Ipsum.</p>
     </div>
     <!-- Projects-->
-
     <!-- Contact-->
     <div class="footer">
         <div class="contact-grid">
@@ -258,8 +249,6 @@
         </div>
     </div>
     <!-- Contact-->
-
-
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
         integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous">
     </script>
@@ -271,24 +260,28 @@
             var popup = document.getElementById(popupId);
             popup.style.display = "block";
         }
-
         function closePopup(popupId) {
             var popup = document.getElementById(popupId);
             popup.style.display = "none";
         }
-
-        
-        let functionreveal = function(){
+        document.addEventListener('touchmove', function(){
             var boxes = document.querySelectorAll('.projectanimator');
             boxes.forEach(function (projectanimator) {
                 if (isElementInViewport(projectanimator)) {
-                    projectanimator2.classList.add('reveal');
+                    projectanimator.classList.add('reveal');
                 }
             });
         });
+        
+        document.addEventListener('scroll', function () {
+            var boxes = document.querySelectorAll('.projectanimator');
+            boxes.forEach(function (projectanimator) {
+                if (isElementInViewport(projectanimator)) {
+                    projectanimator.classList.add('reveal');
                 }
-
-        let functionreveal2 = function(){ 
+            });
+        });
+        document.addEventListener('touchmove', function () {
             var boxes2 = document.querySelectorAll('.projectanimator2');
             boxes2.forEach(function (projectanimator2) {
                 if (isElementInViewport(projectanimator2)) {
@@ -296,25 +289,26 @@
                 }
             });
         });
-        }
-
-        document.addEventListener('scroll', functionreveal())
-        ocument.addEventListener('touchmove', functionreveal())
-        ocument.addEventListener('scroll', functionreveal2())
-        ocument.addEventListener('touchmove', functionreveal2())
-        
-
+        document.addEventListener('scroll', function () {
+            var boxes2 = document.querySelectorAll('.projectanimator2');
+            boxes2.forEach(function (projectanimator2) {
+                if (isElementInViewport(projectanimator2)) {
+                    projectanimator2.classList.add('reveal2');
+                }
+            });
+        });
         // Função para verificar se um elemento está visível na tela
         function isElementInViewport(el) {
             var rect = el.getBoundingClientRect();
             return (
                 rect.top >= 0 &&
                 rect.left >= 0 &&
+                rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+                rect.right <= (window.innerWidth || document.documentElement.clientWidth)
                 rect.bottom <= window.innerHeight &&
                 rect.right <= window.innerWidth
             );
         }
     </script>
 </body>
-
 </html>
