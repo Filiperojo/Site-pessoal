@@ -264,51 +264,40 @@
             var popup = document.getElementById(popupId);
             popup.style.display = "none";
         }
-        document.addEventListener('touchmove', function(){
-            var boxes = document.querySelectorAll('.projectanimator');
-            boxes.forEach(function (projectanimator) {
-                if (isElementInViewport(projectanimator)) {
-                    projectanimator.classList.add('reveal');
-                }
-            });
-        });
         
-        document.addEventListener('scroll', function () {
-            var boxes = document.querySelectorAll('.projectanimator');
-            boxes.forEach(function (projectanimator) {
-                if (isElementInViewport(projectanimator)) {
-                    projectanimator.classList.add('reveal');
-                }
-            });
+    window.addEventListener('scroll', revealBoxes);
+    window.addEventListener('touchmove', revealBoxes); 
+    window.addEventListener('scroll', revealBoxes2);
+    window.addEventListener('touchmove', revealBoxes2);
+
+    function revealBoxes() {
+        var boxes = document.querySelectorAll('.projectanimator');
+        boxes.forEach(function (projectanimator) {
+            if (isElementInViewport(projectanimator)) {
+                projectanimator.classList.add('reveal');
+            }
         });
-        document.addEventListener('touchmove', function () {
-            var boxes2 = document.querySelectorAll('.projectanimator2');
-            boxes2.forEach(function (projectanimator2) {
-                if (isElementInViewport(projectanimator2)) {
-                    projectanimator2.classList.add('reveal2');
-                }
-            });
+    }
+    function revealBoxes2() {
+        var boxes2 = document.querySelectorAll('.projectanimator2');
+        boxes2.forEach(function (projectanimator2) {
+            if (isElementInViewport(projectanimator2)) {
+                projectanimator2.classList.add('reveal2');
+            }
         });
-        document.addEventListener('scroll', function () {
-            var boxes2 = document.querySelectorAll('.projectanimator2');
-            boxes2.forEach(function (projectanimator2) {
-                if (isElementInViewport(projectanimator2)) {
-                    projectanimator2.classList.add('reveal2');
-                }
-            });
-        });
-        // Função para verificar se um elemento está visível na tela
-        function isElementInViewport(el) {
-            var rect = el.getBoundingClientRect();
-            return (
-                rect.top >= 0 &&
-                rect.left >= 0 &&
-                rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
-                rect.right <= (window.innerWidth || document.documentElement.clientWidth)
-                rect.bottom <= window.innerHeight &&
-                rect.right <= window.innerWidth
-            );
-        }
+    }
+
+    // Função para verificar se um elemento está visível na tela
+    function isElementInViewport(el) {
+        var rect = el.getBoundingClientRect();
+        return (
+            rect.top >= 0 &&
+            rect.bottom <= (window.innerHeight || document.documentElement.clientHeight));
+
+    }
+
+          
+
     </script>
 </body>
 </html>
