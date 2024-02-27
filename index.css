@@ -413,7 +413,7 @@ h3 {
 
 /* ---------------------------------------------------------HABILIDADES -------------------------------------------------*/
 
-/* ---------------------------------------------------------PROJETOS E EXPERIÊNCIAS -------------------------------------------------*/
+/* ---------------------------------------------------------EXPERIÊNCIAS -------------------------------------------------*/
 
 
 
@@ -470,7 +470,7 @@ h3 {
 
 
 
-/* ---------------------------------------------------------PROJETOS E EXPERIÊNCIAS -------------------------------------------------*/
+/* ---------------------------------------------------------EXPERIÊNCIAS -------------------------------------------------*/
 /* ---------------------------------------------------------CERTIFICADOS -------------------------------------------------*/
 .carrossel {
     text-align: center;
@@ -479,6 +479,99 @@ h3 {
 }
 
 /* ---------------------------------------------------------CERTIFICADOS -------------------------------------------------*/
+/* ---------------------------------------------------------PROJETOS -------------------------------------------------*/
+@keyframes reveal {
+    0% {
+        opacity: 0;
+        transform: translateX(0);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(10%);
+    }
+}
+
+@keyframes reveal2 {
+    0% {
+        opacity: 0;
+        transform: translateX(0);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(-10%);
+    }
+}
+
+
+
+.projectanimator,
+.projectanimator2 {
+    transition: opacity 0.5s, transform 0.5s;
+    display: grid;
+    grid-template-columns: auto;
+    flex-wrap: wrap;
+    opacity: 0;
+    margin-bottom: 5vh;
+
+}
+
+.projectanimator.reveal {
+    opacity: 1;
+    transform: translateX(10%);
+    animation: reveal 0.5s ease-in-out;
+}
+
+.projectanimator2.reveal2 {
+    opacity: 1;
+    transform: translateX(-10%);
+    animation: reveal2 0.5s ease-in-out;
+}
+
+
+.projectanimator h3,
+.projectanimator p {
+    max-width: 55vh;
+    color: white;
+}
+
+
+.projectphoto {
+    width: 100%;
+    max-width: 55vh;
+    max-height: 45vh;
+    height: auto;
+    position: relative;
+    border-radius: 10px;
+    margin-bottom: 5vh;
+
+}
+
+.projectanimator2 h3,
+.projectanimator2 p {
+    text-align: right;
+    max-width: 55vh;
+    color: white;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ---------------------------------------------------------PROJETOS -------------------------------------------------*/
+
 /* ---------------------------------------------------------RODAPÉ -------------------------------------------------*/
 
 .footer {
