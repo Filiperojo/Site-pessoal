@@ -489,6 +489,7 @@ h3 {
     100% {
         opacity: 1;
         transform: translateX(10%);
+        margin-right: 10%;
     }
 }
 
@@ -501,6 +502,7 @@ h3 {
     100% {
         opacity: 1;
         transform: translateX(-10%);
+        margin-left: 10%;
     }
 }
 
@@ -520,12 +522,14 @@ h3 {
 .projectanimator.reveal {
     opacity: 1;
     transform: translateX(10%);
+    margin-right: 10%;
     animation: reveal 0.5s ease-in-out;
 }
 
 .projectanimator2.reveal2 {
     opacity: 1;
     transform: translateX(-10%);
+    margin-left: 10%;
     animation: reveal2 0.5s ease-in-out;
 }
 
