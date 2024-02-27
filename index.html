@@ -277,8 +277,7 @@
             popup.style.display = "none";
         }
 
-        document.addEventListener('touchmove', revealBoxes);
-        document.addEventListener('touchmove', function () {
+        document.addEventListener('touchmove', function(){
             var boxes = document.querySelectorAll('.projectanimator');
             boxes.forEach(function (projectanimator) {
                 if (isElementInViewport(projectanimator)) {
@@ -286,7 +285,23 @@
                 }
             });
         });
-        document.addEventListener('touchmove', revealBoxes2);
+        
+        document.addEventListener('scroll', function () {
+            var boxes = document.querySelectorAll('.projectanimator');
+            boxes.forEach(function (projectanimator) {
+                if (isElementInViewport(projectanimator)) {
+                    projectanimator.classList.add('reveal');
+                }
+            });
+        });
+        document.addEventListener('touchmove', function () {
+            var boxes2 = document.querySelectorAll('.projectanimator2');
+            boxes2.forEach(function (projectanimator2) {
+                if (isElementInViewport(projectanimator2)) {
+                    projectanimator2.classList.add('reveal2');
+                }
+            });
+        });
         document.addEventListener('scroll', function () {
             var boxes2 = document.querySelectorAll('.projectanimator2');
             boxes2.forEach(function (projectanimator2) {
