@@ -278,7 +278,7 @@
         }
 
         document.addEventListener('touchmove', revealBoxes);
-        document.addEventListener('scroll', function () {
+        document.addEventListener('touchmove', function () {
             var boxes = document.querySelectorAll('.projectanimator');
             boxes.forEach(function (projectanimator) {
                 if (isElementInViewport(projectanimator)) {
