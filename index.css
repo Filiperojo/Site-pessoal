@@ -488,7 +488,7 @@ h3 {
 
     100% {
         opacity: 1;
-        transform: translateX(10%);
+        transform: translateX(5%);
         margin-right: 10%;
     }
 }
@@ -501,7 +501,7 @@ h3 {
 
     100% {
         opacity: 1;
-        transform: translateX(-10%);
+        transform: translateX(-5%);
         margin-left: 10%;
     }
 }
@@ -521,31 +521,30 @@ h3 {
 
 .projectanimator.reveal {
     opacity: 1;
-    transform: translateX(10%);
+    transform: translateX(5%);
     margin-right: 10%;
     animation: reveal 0.5s ease-in-out;
 }
 
 .projectanimator2.reveal2 {
     opacity: 1;
-    transform: translateX(-10%);
-    margin-left: 10%;
+    transform: translateX(-5%);
     animation: reveal2 0.5s ease-in-out;
+    margin-left: 10%;
 }
 
 
 .projectanimator h3,
 .projectanimator p {
-    max-width: 65vh;
-    width: 100%;
+    max-width: 105vh;
     color: white;
 }
 
 
 .projectphoto {
     width: 100%;
-    max-width: 65vh;
-    max-height: 55vh;
+    max-width: 105vh;
+    max-height: 65vh;
     height: auto;
     position: relative;
     border-radius: 10px;
@@ -556,9 +555,8 @@ h3 {
 .projectanimator2 h3,
 .projectanimator2 p {
     text-align: right;
-    max-width: 65vh;
+    max-width: 105vh;
     color: white;
-    width: 100%
 }
 
 
